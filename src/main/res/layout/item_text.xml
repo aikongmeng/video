@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="300dp"
+    android:layout_height="match_parent"
+    android:minHeight="100dp"
     android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical">
@@ -9,22 +10,25 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="fill_parent"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
         android:clickable="true"
         android:gravity="center"
-        android:text="添加文本"
-        android:visibility="gone" />
+        android:minHeight="100dp"
+        android:text="点击添加文本"
+        android:visibility="visible" />
 
     <EditText
+        android:background="@drawable/ebg"
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left|center"
-        android:inputType="textMultiLine"
         android:hint="输入内容"
-        android:maxLines="7"
-        android:minLines="7"
+        android:imeOptions="actionSearch"
+        android:inputType="textImeMultiLine"
         android:maxLength="72"
+        android:minHeight="100dp"
+        android:maxLines="7"
         android:scrollbars="none"
         android:text="这是编辑内容"
         android:visibility="gone" />

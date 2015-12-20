@@ -32,7 +32,7 @@ public class MyVideoView extends VideoView {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         float sw = Constants.getScreenWidth(context) /1.5f  ;
-        setMeasuredDimension((int)sw,  (int)((sw*9)/19f));
+        setMeasuredDimension((int)sw,  (int)((sw*9)/16f));
         Log.i(TAG, "onMeasure: w&h:"+getMeasuredWidth()+","+getMeasuredHeight());
     }
 

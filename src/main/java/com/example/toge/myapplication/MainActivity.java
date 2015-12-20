@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewText.setLayoutManager(layoutManager);
         recyclerViewText.addItemDecoration(new SpaceItemDecoration(spacingInPixels));
         textAdapter = new TextAdapter(this, initTextData());
+        recyclerViewText.setItemViewCacheSize(0);
         recyclerViewText.setAdapter(textAdapter);
     }
 
@@ -64,9 +65,9 @@ public class MainActivity extends AppCompatActivity {
 
     private List<TextEntity> initTextData() {
         textData = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 23; i++) {
             TextEntity bean = new TextEntity();
-            bean.setText(Constants.strings[i]);
+            bean.setText(Constants.strings[0]+i);
             textData.add(bean);
         }
         return textData;
